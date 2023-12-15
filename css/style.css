@@ -40,8 +40,8 @@ body {
   margin: auto;
   padding: 2.5em;
   position: relative;
-  top: 170px;
-  border-radius: 13px;
+  top: 10.625em;
+  border-radius: 1em;
   margin-bottom: 100px;
 }
 
@@ -71,9 +71,8 @@ body {
   font-size: 1.125em;
   margin-bottom: 1.57em;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  transition: .2s;
+  transition: color .2s;
 }
 
 .question .label:hover {
@@ -86,9 +85,42 @@ body {
   width: 30px;
   height: 31px;
   background-image: url("../assets/images/icon-minus.svg");
+  margin-left: auto;
 }
 
 .question .description {
   color: var(--clr-font-light);
   line-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+  body::before {
+    height: 232px;
+    background-image: url("../assets/images/background-pattern-mobile.svg");
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 325px;
+    border-radius: .5em;
+    padding: 2em;
+  }
+
+  .title {
+    font-size: 2.5em;
+    gap: .6em;
+  }
+
+  .title::before {
+    width: 24px;
+    height: 25px;
+    background-size: cover;
+  }
+
+  .question .label p {
+    width: 220px;
+  }
 }
